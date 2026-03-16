@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Math Storm</title>
+</head>
+<body>
+
+<h2>Math Storm ⚡</h2>
+<p id="q"></p>
+
+<input id="ans" placeholder="Your answer">
+<button onclick="check()">Submit</button>
+
+<p id="result"></p>
+
+<script>
+let a = Math.floor(Math.random()*10);
+let b = Math.floor(Math.random()*10);
+document.getElementById("q").innerHTML = a + " + " + b + " = ?";
+
+function check(){
+ let user = document.getElementById("ans").value;
+ if(user == a+b){
+   document.getElementById("result").innerHTML="Correct ⚡";
+ } else{
+   document.getElementById("result").innerHTML="Wrong ❌";
+ }
+}
+</script>
+
+</body>
+</html>
